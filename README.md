@@ -1,3 +1,52 @@
+## Todo / Goals - List: Web App
+
+Purpose: Create a todo/ goals list web application that has **CRUD** and **Security** capabilities.
+
+## Specifications
+
+1. Architecture: This web application was created using solely React JS and its associated hooks.
+
+            - Pre-Sets use:
+                               * Node Manager
+                               * Node Package Manager
+                               * Node.js
+                      
+3. Technology Used :
+
+           
+            - Hooks:
+                               * useContext : manage state globally and share data across multiple components
+                               * useState : handle session/component state
+                               * useNavigate : used to navigate between pages/ component's
+                               * useAuth (custom hook created using: createContext (react library) )
+
+            - npm libraries:
+                               * react
+                               * react-router-dom
+                               * babel
+                               * eslint
+                               * Bootstrap
+
+
+
+   # Version 1 Images
+
+  ![ezcv logo](https://github.com/LemuelBenitez/Goals_List_ReactJS_FrontEnd/blob/main/v1_images/Screenshot%202024-04-07%20at%2012.56.39%E2%80%AFPM.png)
+
+  ![ezcv logo](https://github.com/LemuelBenitez/Goals_List_ReactJS_FrontEnd/blob/main/v1_images/Screenshot%202024-04-07%20at%2012.56.50%E2%80%AFPM.png)
+
+  ![ezcv logo](https://github.com/LemuelBenitez/Goals_List_ReactJS_FrontEnd/blob/main/v1_images/Screenshot%202024-04-07%20at%201.26.36%E2%80%AFPM.png)
+
+  ![ezcv logo](https://github.com/LemuelBenitez/Goals_List_ReactJS_FrontEnd/blob/main/v1_images/Screenshot%202024-04-07%20at%2012.57.01%E2%80%AFPM.png)
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
