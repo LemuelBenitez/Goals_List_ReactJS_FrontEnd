@@ -19,7 +19,7 @@ export default function Header() {
                { isAuthenticated &&
                     <ul className="navbar-nav">
                         <li className="nav-item fs-5"><Link className="nav-link" to="/welcome/:username">Home</Link></li>
-                        <li className="nav-item fs-5"><Link className="nav-link" to="/list">Todos</Link></li>
+                        <li className="nav-item fs-5"><Link className="nav-link" to="/users/{username}/list">Todos</Link></li>
                     </ul>
                 }
                 </div>

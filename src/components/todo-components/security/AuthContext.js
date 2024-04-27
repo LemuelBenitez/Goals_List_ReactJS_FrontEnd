@@ -9,13 +9,16 @@ export const useAuth = () => useContext(AuthContext) ; // hook created so that i
 export default function AuthProvider({children}){
     const[number, setNumber] = useState(0);
     const[isAuthenticated, setAuth] = useState(false);
-    
+    const[username, setUsername] = useState(null);
+
     function LoginingIn(username, password){
-        if(username === 'user' && password === 'password'){
+        if(username === 'lemuel' && password === 'password'){
             setAuth(true);
+            setUsername(username)
             return true;
         }else{
             setAuth(false);
+            setUsername(null)
             return false;
         }
     }
@@ -25,7 +28,7 @@ export default function AuthProvider({children}){
     }
     
     return(
-<AuthContext.Provider value={{number , isAuthenticated, setAuth, LoginingIn, LogingOut}}>
+<AuthContext.Provider value={{number , isAuthenticated, setAuth, LoginingIn, LogingOut, username}}>
     {children}
 </AuthContext.Provider>
     );

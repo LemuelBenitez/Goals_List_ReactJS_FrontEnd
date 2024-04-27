@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth} from "./security/AuthContext";
 
 export default function Login(){
-    const [username, setUsername] = useState('user');
+    const [username, setUsername] = useState('lemuel');
     const [password, setPassword] = useState('password');
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const authContext = useAuth();

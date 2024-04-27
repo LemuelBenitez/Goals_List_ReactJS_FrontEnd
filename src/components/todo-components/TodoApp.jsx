@@ -4,6 +4,7 @@ import LogOut from "./LogOut";
 import WelcomePage from "./WelcomePage";
 import ErrorPage from "./ErrorComponent";
 import ListTodos from "./ListTodos";
+import Update from "./UpdatePage";
 import Header from "./redundantParts/Header";
 import Footer from "./redundantParts/Footer";
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
@@ -28,9 +29,10 @@ export default function TodoApp(){
                  </Routes>
                  <AuthenticatedRoutes>
                  <Routes>
-                 <Route path='/welcome/:username' element={<WelcomePage />}></Route>
-                 <Route path='/list' element={<ListTodos />}></Route>
+                 <Route path='/welcome/:Lemuel' element={<WelcomePage />}></Route>
+                 <Route path= '/users/{username}/list' element={<ListTodos />}></Route>
                  <Route path='/loggedout' element={<LogOut />}></Route>
+                 <Route path='/updateItem/:id' element={<Update />} ></Route>
                  <Route path='*' element={<ErrorPage />}></Route>
                  </Routes>
                  </AuthenticatedRoutes>
