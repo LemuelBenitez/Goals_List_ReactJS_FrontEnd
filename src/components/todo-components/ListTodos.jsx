@@ -91,6 +91,12 @@ export default function ListTodos () {
             ))}
           </tbody>
         </table>
+        <div className = "container">
+            <button type="button" className="btn btn-primary"
+             onClick={()=> navigate('/addItem')}>
+            Add A Goal
+            </button>
+        </div>
       </div>
     </div>
   )

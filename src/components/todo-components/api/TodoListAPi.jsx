@@ -15,3 +15,11 @@ export function retrieveItem(id){
 export function deleteItem(id){
     return apiClient.delete(`deleteItem/${id}`)
 }
+
+export function updateItem(id, todo){
+    return apiClient.put(`/updateItem/${id}`, todo)
+}
+
+export function addItem(todo){
+    return apiClient.put(`/addItem`, todo)
+}

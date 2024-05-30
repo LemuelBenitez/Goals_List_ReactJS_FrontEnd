@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { retrieveItem, updateItem } from "./api/TodoListAPi";
+import { addItem} from "./api/TodoListAPi";
 import {Formik, Form, Field, ErrorMessage } from 'formik';
 import { useAuth } from "./security/AuthContext";
 
-export default function Update(){
-const {id} = useParams()
+export default function AddAGoal(){
 const [description, setDescription] = useState('')
 const [date, setDate] = useState('')
 
@@ -14,30 +13,16 @@ const username = authContext.username;
 
 const navigate = useNavigate();
 
-useEffect(
-    () => retrieveListItem(), [id]
-)
-function retrieveListItem(){
-    retrieveItem(id)
-    .then((response) =>{
-      //console.log(response)
-      setDescription(response.data.description)
-      setDate(response.data.targetDate)
-    })
-    .catch(error => console.log(error))
-}
-
 function onSubmit(values){
     console.log(values)
     const todo = {
-        id:id,
         username: username,
         description: values.description,
         targetDate: values.targetDate,
         done: false
     }
     console.log(todo);
-    updateItem(id, todo)
+    addItem(todo)
     .then( ()=>{
     navigate('/users/{username}/list')
     })
